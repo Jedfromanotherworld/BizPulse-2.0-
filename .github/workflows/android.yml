@@ -1,0 +1,38 @@
+name: Android APK and tests
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['Documentation/**', '*.md']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: recursive
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+      - name: Install Android tools
+        run: sdkmanager 'platforms;android-34' 'build-tools;34.0.0' 'ndk;27.2.12479018' 'cmake;3.22.1'
+      - name: Download verified offline AI model
+        run: python3 scripts/download_model.py
+      - name: Build and test
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug testDebugUnitTest assembleDebugAndroidTest --no-daemon --max-workers=2
+      - name: Upload APK and reports
+        uses: actions/upload-artifact@v7
+        with:
+          name: BizPulse-2.0-debug
+          path: |
+            app/build/outputs/apk/debug/*.apk
+            app/build/reports/tests/testDebugUnitTest/
+          compression-level: 0
+          retention-days: 14
