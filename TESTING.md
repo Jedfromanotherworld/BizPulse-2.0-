@@ -1,6 +1,6 @@
 # Testing and evaluation
 
-Automated results will be recorded in BUILD-VERIFICATION.md. Do not mark device cases Passed before running them on the new APK.
+Automated results: 23 unit tests passed; main APK and instrumented test APK compiled. See BUILD-VERIFICATION.md. Do not mark device cases Passed before running them on the new APK.
 
 | Test | Expected | Actual | Status |
 |---|---|---|---|
