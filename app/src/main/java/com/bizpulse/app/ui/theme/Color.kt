@@ -1,0 +1,15 @@
+package com.bizpulse.app.ui.theme
+import androidx.compose.ui.graphics.Color
+val Primary = Color(0xFF10B981)
+val PrimaryDark = Color(0xFF059669)
+val Secondary = Color(0xFF0F172A)
+val Success = Color(0xFF047857)
+val Warning = Color(0xFFB45309)
+val Danger = Color(0xFFEF4444)
+val Background = Color(0xFFEEF2F6)
+val Surface = Color(0xFFFFFFFF)
+val TextPrimary = Color(0xFF0F172A)
+val TextSecondary = Color(0xFF475569)
+val TextTertiary = Color(0xFF64748B)
+val Border = Color(0xFFE2E8F0)
+val CardBorder = Color(0xFFF1F5F9)

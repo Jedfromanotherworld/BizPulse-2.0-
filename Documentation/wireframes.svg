@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="700" viewBox="0 0 1120 700">
+<rect width="1120" height="700" fill="#EEF2F6"/>
+<text x="35" y="38" font-family="sans-serif" font-size="24" fill="#0F172A">BizPulse • layout wireframes (not app screenshots)</text>
+<rect x="35" y="70" width="330" height="590" rx="25" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="55" y="108" font-family="sans-serif" font-weight="bold" font-size="20" fill="#059669">BizPulse</text>
+<text x="55" y="155" font-family="sans-serif" font-weight="bold" font-size="24" fill="#0F172A">Dashboard</text>
+<rect x="51" y="180" width="298" height="52" rx="14" fill="#F1F5F9"/>
+<text x="63" y="211" font-family="sans-serif" font-size="13" fill="#0F172A">Welcome back, Maria</text>
+<rect x="51" y="245" width="298" height="52" rx="14" fill="#F1F5F9"/>
+<text x="63" y="276" font-family="sans-serif" font-size="13" fill="#0F172A">Today&#x27;s Revenue | Today&#x27;s Profit</text>
+<rect x="51" y="310" width="298" height="52" rx="14" fill="#F1F5F9"/>
+<text x="63" y="341" font-family="sans-serif" font-size="13" fill="#0F172A">Total Products | Total Profit</text>
+<rect x="51" y="375" width="298" height="52" rx="14" fill="#F1F5F9"/>
+<text x="63" y="406" font-family="sans-serif" font-size="13" fill="#0F172A">Daily sales target</text>
+<rect x="51" y="440" width="298" height="52" rx="14" fill="#F1F5F9"/>
+<text x="63" y="471" font-family="sans-serif" font-size="13" fill="#0F172A">Business Insight</text>
+<rect x="51" y="505" width="298" height="52" rx="14" fill="#D1FAE5"/>
+<text x="63" y="536" font-family="sans-serif" font-size="13" fill="#0F172A">Last 7 days • bar chart</text>
+<text x="53" y="628" font-family="sans-serif" font-size="11" fill="#475569">Home   Stock   POS   Analytics   Manage   Guide</text>
+<rect x="400" y="70" width="330" height="590" rx="25" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="420" y="108" font-family="sans-serif" font-weight="bold" font-size="20" fill="#059669">BizPulse</text>
+<text x="420" y="155" font-family="sans-serif" font-weight="bold" font-size="24" fill="#0F172A">Inventory</text>
+<rect x="416" y="180" width="298" height="52" rx="14" fill="#F1F5F9"/>
+<text x="428" y="211" font-family="sans-serif" font-size="13" fill="#0F172A">All | Low Stock | Out of Stock</text>
+<rect x="416" y="245" width="298" height="52" rx="14" fill="#F1F5F9"/>
+<text x="428" y="276" font-family="sans-serif" font-size="13" fill="#0F172A">Search products or barcode</text>
+<rect x="416" y="310" width="298" height="52" rx="14" fill="#F1F5F9"/>
+<text x="428" y="341" font-family="sans-serif" font-size="13" fill="#0F172A">Cola 1.5L • Beverages</text>
+<rect x="416" y="375" width="298" height="52" rx="14" fill="#F1F5F9"/>
+<text x="428" y="406" font-family="sans-serif" font-size="13" fill="#0F172A">₱89.00 • 42 in stock</text>
+<rect x="416" y="440" width="298" height="52" rx="14" fill="#F1F5F9"/>
+<text x="428" y="471" font-family="sans-serif" font-size="13" fill="#0F172A">Price / stock / margin</text>
+<rect x="416" y="505" width="298" height="52" rx="14" fill="#D1FAE5"/>
+<text x="428" y="536" font-family="sans-serif" font-size="13" fill="#0F172A">Owner: Add • Edit • Delete</text>
+<text x="418" y="628" font-family="sans-serif" font-size="11" fill="#475569">Home   Stock   POS   Analytics   Manage   Guide</text>
+<rect x="765" y="70" width="330" height="590" rx="25" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="785" y="108" font-family="sans-serif" font-weight="bold" font-size="20" fill="#059669">BizPulse</text>
+<text x="785" y="155" font-family="sans-serif" font-weight="bold" font-size="24" fill="#0F172A">Point of Sale</text>
+<rect x="781" y="180" width="298" height="52" rx="14" fill="#F1F5F9"/>
+<text x="793" y="211" font-family="sans-serif" font-size="13" fill="#0F172A">Quick Sale Mode</text>
+<rect x="781" y="245" width="298" height="52" rx="14" fill="#F1F5F9"/>
+<text x="793" y="276" font-family="sans-serif" font-size="13" fill="#0F172A">Search / Scan barcode</text>
+<rect x="781" y="310" width="298" height="52" rx="14" fill="#F1F5F9"/>
+<text x="793" y="341" font-family="sans-serif" font-size="13" fill="#0F172A">Product list / quick grid</text>
+<rect x="781" y="375" width="298" height="52" rx="14" fill="#F1F5F9"/>
+<text x="793" y="406" font-family="sans-serif" font-size="13" fill="#0F172A">Cart • item quantities</text>
+<rect x="781" y="440" width="298" height="52" rx="14" fill="#F1F5F9"/>
+<text x="793" y="471" font-family="sans-serif" font-size="13" fill="#0F172A">Subtotal + VAT (12%)</text>
+<rect x="781" y="505" width="298" height="52" rx="14" fill="#D1FAE5"/>
+<text x="793" y="536" font-family="sans-serif" font-size="13" fill="#0F172A">Total • Complete Sale</text>
+<text x="783" y="628" font-family="sans-serif" font-size="11" fill="#475569">Home   Stock   POS   Analytics   Manage   Guide</text>
+</svg>

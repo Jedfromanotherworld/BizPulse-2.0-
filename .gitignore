@@ -1,0 +1,25 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/app/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+*.jks
+*.keystore
+
+# Downloadable builds stay in this ZIP; GitHub stores the source.
+/APK/*.apk
+*.zip
+
+app/src/main/assets/models/*.gguf
+*.part
+.cxx/
+local.properties
+
+app/src/main/assets/models/
+
+app/src/main/res/drawable/owner_qr.png
