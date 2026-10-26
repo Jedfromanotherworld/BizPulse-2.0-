@@ -20,7 +20,22 @@ jobs:
           java-version: '17'
           cache: gradle
       - name: Install Android tools
-        run: sdkmanager 'platforms;android-34' 'build-tools;34.0.0' 'ndk;27.2.12479018' 'cmake;3.22.1'
+        run: |
+          python3 - <<'PY'
+          import os,pathlib,urllib.request,zipfile,subprocess,shutil
+          root=pathlib.Path(os.environ['RUNNER_TEMP'])/'android-sdk'
+          root.mkdir(exist_ok=True)
+          archive=root/'tools.zip'
+          urllib.request.urlretrieve('https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip',archive)
+          with zipfile.ZipFile(archive) as z:z.extractall(root/'unpacked')
+          (root/'cmdline-tools').mkdir(exist_ok=True)
+          shutil.move(str(root/'unpacked/cmdline-tools'),str(root/'cmdline-tools/latest'))
+          for p in (root/'cmdline-tools/latest/bin').iterdir():p.chmod(0o755)
+          cmd=[str(root/'cmdline-tools/latest/bin/sdkmanager'),'--sdk_root='+str(root)]
+          subprocess.run(cmd+['--licenses'],input='y\n'*100,text=True,check=True)
+          subprocess.run(cmd+['platforms;android-34','build-tools;34.0.0','ndk;27.2.12479018','cmake;3.22.1'],check=True)
+          pathlib.Path('local.properties').write_text('sdk.dir='+str(root)+'\n')
+          PY
       - name: Download verified offline AI model
         run: python3 scripts/download_model.py
       - name: Build and test
