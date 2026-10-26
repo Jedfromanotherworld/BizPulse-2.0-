@@ -39,7 +39,7 @@ Owner can edit account names in Manage. Demo registration permits either role; t
 Use JDK 17, Android SDK 34 / Build Tools 34.0.0, NDK 27.2.12479018 and CMake 3.22.1. Gradle wrapper 8.2 and Android Gradle Plugin 8.2.2 are pinned.
 
 1. Clone with submodules: `git clone --recurse-submodules https://github.com/Jedfromanotherworld/BizPulse-2.0-.git`.
-2. Copy your private payment QR to `app/src/main/res/drawable/owner_qr.png` before building, or select it later in Manage → QR Settings. This image is excluded from the public source. Run `python3 scripts/download_model.py` (about 469 MiB). The model is bundled into the APK; first use copies it into private app storage. Allow over 1 GB storage plus working RAM.
+2. The owner-approved payment QR is included at `app/src/main/res/drawable/owner_qr.png`; it can also be changed in Manage → QR Settings. Run `python3 scripts/download_model.py` (about 469 MiB). The model is bundled into the APK; first use copies it into private app storage. Allow over 1 GB storage plus working RAM.
 3. Open the project root in Android Studio and let it set `local.properties` for your SDK.
 4. Run `./gradlew assembleDebug testDebugUnitTest` (Windows: `gradlew.bat`).
 5. Find the APK at `app/build/outputs/apk/debug/app-debug.apk`.
@@ -52,4 +52,4 @@ Data is local to one installation; this is not multi-device synchronization. Sup
 
 ## GitHub builds
 
-The Android APK and tests workflow builds on source pushes to main and can be started from Actions → Run workflow. The public build does not include the owner’s payment QR. An owner can select that image in Manage → QR Settings after installation. Workflow APKs expire after 14 days; source remains in the repository.
+The Android APK and tests workflow builds on source pushes to main and can be started from Actions → Run workflow. The public build includes the payment QR with the owner's explicit approval. Workflow APKs expire after 14 days. Published APKs are available on the [Releases page](https://github.com/Jedfromanotherworld/BizPulse-2.0-/releases).

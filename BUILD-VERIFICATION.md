@@ -15,6 +15,6 @@ Verified on 26 October 2026.
 Private-download APK size: 499073542 bytes.
 SHA-256: `6a0b7068bfd21d7a2b94196967283f806feee985e83f71415669554915574d6d`.
 
-The private APK includes the supplied payment QR. Public GitHub source/workflow builds exclude that image; the owner can select it in Manage → QR Settings. Public and private APK hashes/signing certificates may differ.
+The previously delivered APK includes the supplied payment QR. The owner has now explicitly approved publishing that QR in the source and release APK. The release also uses the replacement logo on login and registration. Public and earlier APK hashes/signing certificates may differ. The checks above describe the earlier local build; see GitHub Actions for the release build's results.
 
 Not verified on a physical device: installation, camera scanning, maps, offline AI performance, notification timing, printing, backup/restore UI and accessibility. The Android test suite is compiled only. Do not mark these device cases Passed without testing on the POCO X8 Pro.
