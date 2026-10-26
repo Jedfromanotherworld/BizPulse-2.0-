@@ -51,3 +51,24 @@ jobs:
             app/build/reports/tests/testDebugUnitTest/
           compression-level: 0
           retention-days: 14
+  publish:
+    if: github.event_name == 'push' && contains(github.event.head_commit.message, '[release v2.0.0]')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v7
+      - name: Download tested build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download "$GITHUB_RUN_ID" --name BizPulse-2.0-debug --dir release-artifact
+      - name: Publish approved APK and payment QR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp release-artifact/outputs/apk/debug/app-debug.apk BizPulse-2.0.0-arm64-debug.apk
+          cp app/src/main/res/drawable/owner_qr.png BizPulse-payment-QR.jpg
+          sha256sum BizPulse-2.0.0-arm64-debug.apk BizPulse-payment-QR.jpg > SHA256SUMS.txt
+          gh release create v2.0.0 --target "$GITHUB_SHA" --title "BizPulse 2.0.0" --notes-file RELEASE-NOTES.md BizPulse-2.0.0-arm64-debug.apk BizPulse-payment-QR.jpg SHA256SUMS.txt

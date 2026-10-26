@@ -15,7 +15,7 @@ import com.bizpulse.app.ui.components.*
     Page {
         Spacer(Modifier.height(16.dp))
         Column(Modifier.fillMaxWidth(),horizontalAlignment=Alignment.CenterHorizontally) {
-            androidx.compose.foundation.Image(androidx.compose.ui.res.painterResource(com.bizpulse.app.R.drawable.bizpulse_logo),"BizPulse logo",Modifier.height(110.dp))
+            androidx.compose.foundation.Image(androidx.compose.ui.res.painterResource(com.bizpulse.app.R.drawable.bizpulse_logo),"BizPulse logo",Modifier.width(240.dp).height(140.dp),contentScale=androidx.compose.ui.layout.ContentScale.Fit)
             Text("BizPulse 2",style=MaterialTheme.typography.headlineLarge)
             Text("Smart Business Management v2.0",color=MaterialTheme.colorScheme.onSurfaceVariant)
         }
