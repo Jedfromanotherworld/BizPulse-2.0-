@@ -2,6 +2,9 @@ package com.bizpulse.app.ui.screens.manage
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.*
+import androidx.compose.foundation.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.ui.platform.LocalContext
@@ -12,6 +15,7 @@ import com.bizpulse.app.ui.screens.v2.*
 import com.bizpulse.app.util.*
 @Composable fun ManageScreen(onLogout:()->Unit,vm:ManageViewModel=hiltViewModel()) {
     val d by vm.data.collectAsStateWithLifecycle(); val ui by vm.ui.collectAsStateWithLifecycle()
+    var shiftUser by remember{mutableStateOf<Long?>(null)}
     val context=LocalContext.current
     val picker=rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) {uri -> if(uri!=null) vm.dialog("import",fields=mapOf("uri" to uri.toString()))}
     if(d.current?.role!="owner") { Page { EmptyState("Restricted Access","Only a Business Owner can manage this app."); PrimaryButton("Log Out",onClick=onLogout) }; return }
@@ -26,7 +30,7 @@ import com.bizpulse.app.util.*
             "QR Settings" -> QrSettings()
             "Users" -> {
                 PrimaryButton("Add User (${d.users.size})",onClick={vm.editUser()})
-                d.users.forEach {u -> Panel { Text(u.name,style=MaterialTheme.typography.titleMedium); RoleBadge(u.role); Text("@${u.username}"); Row {TextButton(onClick={vm.editUser(u)}) {Text("Edit")}; TextButton(onClick={vm.dialog("deleteUser",u.id)}) {Text("Delete")}} } }
+                d.users.forEach {u -> Panel { Text(u.name,style=MaterialTheme.typography.titleMedium); RoleBadge(u.role); Text("@${u.username}"); if(u.role=="cashier")TextButton(onClick={shiftUser=u.id}){Text("View Shifts")}; Row {TextButton(onClick={vm.editUser(u)}) {Text("Edit")}; TextButton(onClick={vm.dialog("deleteUser",u.id)}) {Text("Delete")}} } }
             }
             "Transactions" -> {
                 PrimaryButton("Add Transaction (${d.transactions.size})",onClick={vm.editTransaction()})
@@ -52,6 +56,7 @@ import com.bizpulse.app.util.*
             }
         }
     }
+    shiftUser?.let{id->AlertDialog(onDismissRequest={shiftUser=null},title={Text("Cashier shifts")},text={Column(Modifier.heightIn(max=450.dp).verticalScroll(rememberScrollState())){ShiftScreen(owner=true,filterUser=id)}},confirmButton={TextButton(onClick={shiftUser=null}){Text("Close")}})}
     when(ui.dialog) {
         "user" -> UserEditDialog(vm)
         "transaction" -> TransactionEditDialog(vm)

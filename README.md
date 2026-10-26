@@ -49,3 +49,7 @@ Source ZIPs may already include the pinned vendor source; the model download scr
 ## Limitations
 
 Data is local to one installation; this is not multi-device synchronization. Supplier pins use centers of supplied Plus Codes, not surveyed entrances. QR is a displayed image, not bank integration. Demonstration VAT is not tax-invoice certification. The old app's reported camera failure does not establish results for v2; camera, QR readability, map positions, notifications and AI performance require fresh device tests.
+
+## GitHub builds
+
+The Android APK and tests workflow builds on source pushes to main and can be started from Actions → Run workflow. The public build does not include the owner’s payment QR. An owner can select that image in Manage → QR Settings after installation. Workflow APKs expire after 14 days; source remains in the repository.
