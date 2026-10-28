@@ -1,25 +1,41 @@
-# Testing and evaluation
+# Testing and evaluation — BizPulse 2.0
 
-Automated results: 23 unit tests passed; main APK and instrumented test APK compiled. See BUILD-VERIFICATION.md. Do not mark device cases Passed before running them on the new APK.
+## Actual device test
 
-| Test | Expected | Actual | Status |
-|---|---|---|---|
-| Install alongside v1 | Both launch separately with independent data | Not yet tested on phone | Pending |
-| Login and invalid fields | Valid roles accepted; invalid input rejected | Not yet tested on phone | Pending |
-| Shift gate | No sale before Time In; force Time Out prevents new sales | Not yet tested on phone | Pending |
-| FIFO and expiry | Oldest eligible batch deducted; expired stock excluded | Not yet tested on phone | Pending |
-| Camera barcode | Scans printed product barcode, no duplicate sale | Not yet tested on phone | Pending |
-| Manual / simulate / Code128 | Correct product and scannable preview | Not yet tested on phone | Pending |
-| QR checkout | Supplied image legible; manual confirmation required | Not yet tested on phone | Pending |
-| Supplier map | Three pins match intended store locations | Not yet tested on phone | Pending |
-| Offline AI | Airplane-mode summary without crash; note duration | Not yet tested on phone | Pending |
-| Daily notification | Summary eventually generated with permission | Not yet tested on phone | Pending |
-| Report / print | CSV/PDF and receipt contain matching totals | Not yet tested on phone | Pending |
-| Backup / restore | Records, batches, shifts and selected images restored | Not yet tested on phone | Pending |
-| Dark mode | Text and controls remain readable | Not yet tested on phone | Pending |
+- Application version: 2.0.0
+- Tester: Jedediah Ebalobo
+- Phone model: POCO X8 Pro
+- Android version: 16
+- Test date: October 27, 2026
+- Overall result: PASS — the tester reports that all application functions were tested and worked, with no functional errors encountered.
 
-Planned device: POCO X8 Pro, Android 16. Enter actual version, tester, date and observations after installing v2. Previous v1 reports are historical evidence, not v2 test results.
+The results below record the tester's report, not an independent rerun by the documentation author. Screenshots and a demonstration video were supplied as supporting evidence.
 
-Screenshot checklist: login, owner dashboard, cashier shift, inventory, receive stock, scan-to-add barcode, kiosk, QR checkout, receipt, analytics AI, report, supplier map, Manage and dark mode.
+| Test area | Actual result | Status |
+|---|---|---|
+| Installation and launch | Tested; no problem reported | Pass (tester-reported) |
+| Owner/cashier login, registration and validation | Tested; working with no errors reported | Pass (tester-reported) |
+| Inventory, products, categories and stock batches | Tested; working with no errors reported | Pass (tester-reported) |
+| Cashier shifts and checkout requirements | Tested; working with no errors reported | Pass (tester-reported) |
+| Camera barcode, manual entry and barcode tools | Tested; working with no errors reported in version 2.0 | Pass (tester-reported) |
+| POS, cash/QR checkout and receipts | Tested; working with no errors reported | Pass (tester-reported) |
+| Analytics, reports, printing and exports | Tested; working with no errors reported | Pass (tester-reported) |
+| Supplier maps | Tested; working with no errors reported | Pass (tester-reported) |
+| User management, settings and backups | Tested; working with no errors reported | Pass (tester-reported) |
+| Notifications and other application functions | Included in the tester's all-functions test; no errors reported | Pass (tester-reported) |
+| Dark mode and navigation | Tested; working with no errors reported | Pass (tester-reported) |
+| Offline AI | Generated output successfully, but generation took a long time; acceptable to the tester | Pass with performance observation |
 
+## Observations and recommendations
 
+No functional errors were reported during this device test. Offline AI response time is the remaining performance observation; the exact duration was not measured. Future work should optimize generation speed and record timed results. The earlier barcode problem concerned version 1 and is not a failure reported for this version 2 test.
+
+Individual step-by-step logs, measured AI response times and a formal user-evaluation survey were not supplied. The overall all-functions report does not provide separate measurements for every edge case. QR payment receipt is manually verified in the payment account; the app does not automatically verify bank transfers.
+
+## Supporting evidence
+
+The supplied October 27 screenshots show current owner and cashier screens. The demonstration recording is approximately 3 minutes 21 seconds and shows navigation, cashier Time In, camera scan activity, a completed sale receipt and a shift summary.
+
+## Automated build verification
+
+The recorded build verification reports 23 JVM unit tests passed, and the main APK and instrumented test APK compiled. See BUILD-VERIFICATION.md. Compilation is separate from the physical-device test reported above.
