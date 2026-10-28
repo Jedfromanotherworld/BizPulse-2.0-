@@ -13,17 +13,17 @@ The results below record the tester's report, not an independent rerun by the do
 
 | Test area | Actual result | Status |
 |---|---|---|
-| Installation and launch | Tested; no problem reported | Pass (tester-reported) |
-| Owner/cashier login, registration and validation | Tested; working with no errors reported | Pass (tester-reported) |
-| Inventory, products, categories and stock batches | Tested; working with no errors reported | Pass (tester-reported) |
-| Cashier shifts and checkout requirements | Tested; working with no errors reported | Pass (tester-reported) |
-| Camera barcode, manual entry and barcode tools | Tested; working with no errors reported in version 2.0 | Pass (tester-reported) |
-| POS, cash/QR checkout and receipts | Tested; working with no errors reported | Pass (tester-reported) |
-| Analytics, reports, printing and exports | Tested; working with no errors reported | Pass (tester-reported) |
-| Supplier maps | Tested; working with no errors reported | Pass (tester-reported) |
-| User management, settings and backups | Tested; working with no errors reported | Pass (tester-reported) |
-| Notifications and other application functions | Included in the tester's all-functions test; no errors reported | Pass (tester-reported) |
-| Dark mode and navigation | Tested; working with no errors reported | Pass (tester-reported) |
+| Installation and launch | Tested; no problem reported | Pass ) |
+| Owner/cashier login, registration and validation | Tested; working with no errors reported | Pass  |
+| Inventory, products, categories and stock batches | Tested; working with no errors reported | Pass  |
+| Cashier shifts and checkout requirements | Tested; working with no errors reported | Pass  |
+| Camera barcode, manual entry and barcode tools | Tested; working with no errors reported in version 2.0 | Pass  |
+| POS, cash/QR checkout and receipts | Tested; working with no errors reported | Pass  |
+| Analytics, reports, printing and exports | Tested; working with no errors reported | Pass  |
+| Supplier maps | Tested; working with no errors reported | Pass  |
+| User management, settings and backups | Tested; working with no errors reported | Pass  |
+| Notifications and other application functions | Included in the tester's all-functions test; no errors reported | Pass  |
+| Dark mode and navigation | Tested; working with no errors reported | Pass  |
 | Offline AI | Generated output successfully, but generation took a long time; acceptable to the tester | Pass with performance observation |
 
 ## Observations and recommendations
