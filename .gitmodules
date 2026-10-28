@@ -1,3 +1,7 @@
 [submodule "vendor/llama.cpp"]
 	path = vendor/llama.cpp
 	url = https://github.com/ggml-org/llama.cpp.git
+
+[submodule "submission-llama.cpp"]
+	path = Submission/02-Source-Code/BizPulse-2.0/vendor/llama.cpp
+	url = https://github.com/ggml-org/llama.cpp.git
