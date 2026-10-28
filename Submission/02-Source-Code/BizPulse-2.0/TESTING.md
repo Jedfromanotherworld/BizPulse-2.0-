@@ -13,7 +13,7 @@ The results below record the tester's report, not an independent rerun by the do
 
 | Test area | Actual result | Status |
 |---|---|---|
-| Installation and launch | Tested; no problem reported | Pass ) |
+| Installation and launch | Tested; no problem reported | Pass  |
 | Owner/cashier login, registration and validation | Tested; working with no errors reported | Pass  |
 | Inventory, products, categories and stock batches | Tested; working with no errors reported | Pass  |
 | Cashier shifts and checkout requirements | Tested; working with no errors reported | Pass  |
