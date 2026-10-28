@@ -1,0 +1,9 @@
+package com.bizpulse.app.ui.theme
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Shapes
+import androidx.compose.ui.unit.dp
+val CardShape=RoundedCornerShape(20.dp)
+val ButtonShape=RoundedCornerShape(50.dp)
+val InputShape=RoundedCornerShape(14.dp)
+val ModalShape=RoundedCornerShape(24.dp)
+val BizShapes=Shapes(small=InputShape,medium=CardShape,large=ModalShape)

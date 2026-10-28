@@ -1,0 +1,5 @@
+Repository: https://github.com/Jedfromanotherworld/BizPulse-2.0-
+Release: https://github.com/Jedfromanotherworld/BizPulse-2.0-/releases/tag/v2.0.0
+Submission source snapshot: 85faca7bdc832460bfc27994fbfb8157cfa4311e
+APK release source: dd662576e972bc11f3fbbc1e1078dc39e31f2c4a
+Original reference: https://github.com/Jedfromanotherworld/BizPulse/tree/main/Submission
